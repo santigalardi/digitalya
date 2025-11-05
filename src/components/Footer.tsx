@@ -1,4 +1,4 @@
-import digitalyaLogo from '../assets/no-bg-logo1.png';
+import digitalyaLogo from '../assets/digitalya/logo-nobg.png';
 
 const Footer = () => {
   return (
@@ -11,7 +11,15 @@ const Footer = () => {
               alt="DigitalYa logo"
               className="w-[220px] md:w-[300px] mb-6 drop-shadow-[0_0_1px_rgba(255,255,255,1)]"
             />
-            <p>&copy; 2025 DigitalYa. Todos los derechos reservados.</p>
+            <div className="flex flex-col items-center gap-4">
+              <p>&copy; 2025 DigitalYa. Todos los derechos reservados.</p>
+              <p>
+                <a href="mailto:ventas@digitalya.com.ar" className="text-blue-500 hover:underline">
+                  ventas@digitalya.com.ar
+                </a>
+              </p>
+            </div>
+
             {/* <div className="flex gap-4">
               <svg
                 className="cursor-pointer hover:scale-110 transition-all"

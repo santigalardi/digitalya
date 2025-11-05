@@ -1,7 +1,6 @@
 import nutImage from '../assets/nut.svg';
 import cylinderImage from '../assets/cylinder.svg';
 import noodleImage from '../assets/noodle.svg';
-import digitalyaLogo from '../assets/no-bg-logo1.png';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 // import { IoRocketOutline } from 'react-icons/io5';
@@ -16,26 +15,18 @@ const Hero = () => {
 
   return (
     <section
+      id="hero"
       ref={heroRef}
-      className="pt-10 pb-20 md:pt-12 md:pb-16 bg-gradient-to-l from-[#021938] via-[#3FA7DE]  to-[#E8F7FF] overflow-x-clip"
+      className="pt-30 pb-20 md:pt-12 md:pb-16 bg-gradient-to-l from-[#021938] via-[#3FA7DE]  to-[#E8F7FF] overflow-x-clip"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="md:flex items-center">
           {/* Logo y texto */}
-          <div className="md:w-[478px] flex flex-col items-center md:items-start">
-            <img
-              src={digitalyaLogo}
-              alt="DigitalYa logo"
-              className="w-[300px] md:w-[360px] mb-6 drop-shadow-[0_0_1px_rgba(255,255,255,1)]"
-            />
-
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter text-[#021938] mt-4 leading-snug drop-shadow-sm">
-              Marketing, desarrollo web, hosting y correos empresariales
+          <div className="md:w-[552px] flex flex-col items-center md:items-start">
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter text-[#021938] mt-4 leading-snug drop-shadow-sm">
+              Sitios Web, Correos Corporativos, Hosting y Marketing para impulsar tu
               {/* <br /> */}
-              <span className="text-[#3fa7de] drop-shadow-[0_0_1px_rgba(255,255,255,1)]">
-                {' '}
-                para tu negocio digital.
-              </span>
+              <span className="text-[#41A9F0] drop-shadow-[0_0_3px_rgba(255,255,255,5)]"> presencia digital.</span>
             </h2>
 
             {/* <button className="bg-[#021938] mt-[30px] text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center justify-center gap-2 tracking-tight w-[90%] md:w-auto cursor-pointer hover:bg-[#46AAE1] hover:text-[#021938] hover:scale-105 active:scale-95 transition-all duration-300">

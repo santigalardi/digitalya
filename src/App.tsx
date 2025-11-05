@@ -6,13 +6,17 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 // import LogoTicker from './components/LogoTicker';
 import { Toaster } from 'sonner';
+import NavBar from './components/NavBar';
+import Nosotros from './components/Nosotros';
 
 const App = () => {
   return (
     <>
+      <NavBar />
       <Hero />
       {/* <LogoTicker /> */}
       <Features />
+      <Nosotros />
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
       <Contact />
