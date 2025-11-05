@@ -1,4 +1,4 @@
-import FeatureCard from './FeatureCard'; // Ajusta la ruta según tu estructura
+import FeatureCard from './FeatureCard';
 import cubeHelix from '../assets/cube-helix.svg';
 import cubeHelix2 from '../assets/cube-helix2.svg';
 import emojiStar from '../assets/emojistar.svg';
@@ -9,35 +9,38 @@ const Features = () => {
     {
       key: crypto.randomUUID(),
       img: cubeHelix2,
-      title: 'Blazing Fast Performance',
+      title: 'Sitios web a medida',
       description:
-        'Experience lightning-fast speeds with our optimized architecture, ensuring seamless performance even under heavy workloads.',
+        'Diseñamos y desarrollamos sitios únicos, rápidos y optimizados para destacar tu marca. Adaptados a cualquier dispositivo y con enfoque en resultados.',
     },
     {
       key: crypto.randomUUID(),
       img: cubeHelix,
-      title: 'Military-Grade Security',
+      title: 'Correos empresariales',
       description:
-        'Protect your data with advanced encryption, multi-factor authentication, and regular security audits to keep your information safe.',
+        'Configuramos y gestionamos tus correos con dominio propio, brindándote una imagen profesional y comunicación confiable con tus clientes.',
     },
     {
       key: crypto.randomUUID(),
       img: emojiStar,
-      title: 'Real-Time Analytics',
+      title: 'Hosting y mantenimiento',
       description:
-        'Gain actionable insights with real-time dashboards and customizable reports to track your progress and make data-driven decisions.',
+        'Ofrecemos alojamiento seguro, actualizaciones constantes y soporte técnico personalizado para que tu sitio siempre funcione al máximo rendimiento.',
     },
   ];
 
   return (
-    <section className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] pt-10 pb-24">
+    <section className="bg-gradient-to-b from-[#E8F7FF] via-[#FFFFFF] to-[#d3edfd] pt-16 pb-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl text-[#010D3E] text-center font-bold tracking-tight">Features</h2>
-        <p className="text-2xl text-center mt-10">
-          Effortlessly turn your ideas into reality with our cutting-edge features.
+        <h2 className="mb-10 text-4xl md:text-5xl text-[#021938] text-center font-bold tracking-tight">
+          Soluciones Digitales para tu Negocio
+        </h2>
+        <p className="text-xl md:text-2xl text-center mt-6 text-black">
+          Todo lo que necesitás para construir y hacer crecer tu presencia online.
         </p>
+
         <Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16">
             {features.map((feature) => (
               <FeatureCard
                 key={feature.key}

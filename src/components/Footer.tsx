@@ -1,17 +1,18 @@
+import digitalyaLogo from '../assets/no-bg-logo1.png';
+
 const Footer = () => {
   return (
     <footer className="bg-black text-[#7B7B7B] py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:justify-between">
-          <div className="flex flex-col gap-12 mb-20 md:mb-0 text-white">
-            <p className="text-7xl font-bold tracking-tighter bg-gradient-to-b from-[#1040dc] to-[#0e0e46] text-transparent bg-clip-text mt-1 leading-tight p-1">
-              Flowly
-            </p>
-            {/* <p className="max-w-md">
-              Streamline your tasks, boost your productivity, and effortlessly turn your ideas into reality.
-            </p> */}
-            <p>&copy; 2025 Flowly. All rights reserved.</p>
-            <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row md:justify-center">
+          <div className="flex flex-col md:flex-row gap-12 mb-20 md:mb-0 text-white items-center justify-around">
+            <img
+              src={digitalyaLogo}
+              alt="DigitalYa logo"
+              className="w-[220px] md:w-[300px] mb-6 drop-shadow-[0_0_1px_rgba(255,255,255,1)]"
+            />
+            <p>&copy; 2025 DigitalYa. Todos los derechos reservados.</p>
+            {/* <div className="flex gap-4">
               <svg
                 className="cursor-pointer hover:scale-110 transition-all"
                 width="30"
@@ -77,9 +78,9 @@ const Footer = () => {
                   fill="currentColor"
                 />
               </svg>
-            </div>
+            </div> */}
           </div>
-          <nav className="flex flex-col md:flex-row gap-12">
+          {/* <nav className="flex flex-col md:flex-row gap-12">
             <div className="flex flex-col gap-2">
               <p className="font-bold text-white">Product</p>
               <p className="cursor-pointer hover:text-gray-200">Features</p>
@@ -110,7 +111,7 @@ const Footer = () => {
               <p className="cursor-pointer hover:text-gray-200">Terms</p>
               <p className="cursor-pointer hover:text-gray-200">Security</p>
             </div>
-          </nav>
+          </nav> */}
         </div>
       </div>
     </footer>

@@ -1,9 +1,10 @@
 import nutImage from '../assets/nut.svg';
 import cylinderImage from '../assets/cylinder.svg';
 import noodleImage from '../assets/noodle.svg';
+import digitalyaLogo from '../assets/no-bg-logo1.png';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { IoRocketOutline } from 'react-icons/io5';
+// import { IoRocketOutline } from 'react-icons/io5';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -16,27 +17,39 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip"
+      className="pt-10 pb-20 md:pt-12 md:pb-16 bg-gradient-to-l from-[#021938] via-[#3FA7DE]  to-[#E8F7FF] overflow-x-clip"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="md:flex items-center">
-          <div className="md:w-[478px]">
-            <h1 className="text-7xl md:text-9xl font-bold tracking-tighter bg-gradient-to-b from-[#1040dc] to-[#0e0e46] text-transparent bg-clip-text leading-tight pb-1">
-              Flowly
-            </h1>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter text-zinc-50 mt-6 leading-snug">
-              Streamline your tasks, boost your productivity, and achieve more with Flowly.
+          {/* Logo y texto */}
+          <div className="md:w-[478px] flex flex-col items-center md:items-start">
+            <img
+              src={digitalyaLogo}
+              alt="DigitalYa logo"
+              className="w-[300px] md:w-[360px] mb-6 drop-shadow-[0_0_1px_rgba(255,255,255,1)]"
+            />
+
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tighter text-[#021938] mt-4 leading-snug drop-shadow-sm">
+              Marketing, desarrollo web, hosting y correos empresariales
+              {/* <br /> */}
+              <span className="text-[#3fa7de] drop-shadow-[0_0_1px_rgba(255,255,255,1)]">
+                {' '}
+                para tu negocio digital.
+              </span>
             </h2>
-            <button className="bg-black mt-[30px] text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center gap-2 tracking-tight w-[90%] cursor-pointer hover:text-[#c76fb7] hover:scale-102 active:scale-98 transition-all duration-300">
-              <p>Get Started</p>
+
+            {/* <button className="bg-[#021938] mt-[30px] text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center justify-center gap-2 tracking-tight w-[90%] md:w-auto cursor-pointer hover:bg-[#46AAE1] hover:text-[#021938] hover:scale-105 active:scale-95 transition-all duration-300">
+              <p>Empezar ahora</p>
               <IoRocketOutline className="text-xl" />
-            </button>
+            </button> */}
           </div>
+
+          {/* Animaciones decorativas */}
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
             <motion.img
               src={nutImage}
               alt="Nut Image"
-              className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
+              className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0 mix-blend-luminosity opacity-70"
               animate={{ translateY: [-30, 30] }}
               transition={{ duration: 10, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
             />
@@ -45,7 +58,7 @@ const Hero = () => {
               width={220}
               height={220}
               alt="Cylinder image"
-              className="hidden md:block -top-8 -left-32 md:absolute"
+              className="hidden md:block -top-8 -left-32 md:absolute mix-blend-luminosity opacity-70"
               style={{
                 translateY: translateY,
               }}
@@ -55,7 +68,7 @@ const Hero = () => {
               width={220}
               height={220}
               alt="Noodle image"
-              className="hidden lg:block absolute top-[524px] left-[448px]"
+              className="hidden lg:block absolute top-[524px] left-[448px] mix-blend-luminosity opacity-70"
               style={{
                 translateY: translateY,
               }}
