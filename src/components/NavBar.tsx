@@ -17,10 +17,10 @@ const NavBar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Servicios', href: '#services' },
-    // { name: 'Nosotros', href: '#nosotros' },
-    { name: 'Contacto', href: '#contact' },
+    { name: 'Inicio', targetId: 'hero' },
+    { name: 'Servicios', targetId: 'services' },
+    { name: 'Nosotros', targetId: 'about' },
+    { name: 'Contacto', targetId: 'contact' },
   ];
 
   return (
@@ -34,46 +34,49 @@ const NavBar = () => {
         transition={{ duration: 0.6 }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 md:h-26">
+          <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <motion.div
-              className="flex-shrink-0"
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'tween', stiffness: 400, damping: 10 }}
-            >
-              <a href="#">
+            <motion.div className="flex-shrink-0" transition={{ type: 'tween', stiffness: 400, damping: 10 }}>
+              <button
+                onClick={() => {
+                  document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="hover:cursor-pointer"
+              >
                 <img
                   src={digitalyaLogo}
                   alt="DigitalYa logo"
-                  className={`h-10 md:h-20 transition-all duration-300 ${
+                  className={`h-10 md:h-16 transition-all duration-300 ${
                     isScrolled ? 'drop-shadow-none' : 'drop-shadow-[0_0_3px_rgba(255,255,255,1)]'
                   }`}
                 />
-              </a>
+              </button>
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-12">
               {navItems.map((item) => (
-                <motion.a
+                <motion.button
                   key={item.name}
-                  href={item.href}
-                  className={`font-medium text-xl tracking-tight transition-colors duration-300 ${
+                  onClick={() => {
+                    document.getElementById(item.targetId)?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className={`font-medium text-md tracking-tight transition-colors duration-300 bg-transparent border-none cursor-pointer ${
                     isScrolled ? 'text-[#021938] hover:text-[#41A9F0]' : 'text-white hover:text-[#caebfd]'
                   }`}
                 >
                   {item.name}
-                </motion.a>
+                </motion.button>
               ))}
 
-              {/* <motion.button
-                className="bg-[#021938] text-white px-4 py-2 rounded-lg font-semibold inline-flex items-center justify-center gap-2 tracking-tight cursor-pointer hover:bg-[#46AAE1] hover:text-[#021938] transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="bg-[#021938] mt-[10px] text-white px-4 py-2 rounded-lg font-medium inline-flex align items justify-center tracking-tight w-full cursor-pointer hover:bg-[#3FA7DE] active:scale-98 transition-colors duration-300"
               >
-                <p>Contactar</p>
-                <IoRocketOutline className="text-lg" />
-              </motion.button> */}
+                ¿Comenzamos?
+              </button>
             </div>
 
             {/* Mobile menu button */}
@@ -123,14 +126,16 @@ const NavBar = () => {
 
                 <div className="space-y-4">
                   {navItems.map((item) => (
-                    <a
+                    <button
                       key={item.name}
-                      href={item.href}
-                      className="block py-3 px-4 text-[#021938] font-medium rounded-lg hover:bg-[#41A9F0] hover:text-white transition-colors duration-300"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={() => {
+                        document.getElementById(item.targetId)?.scrollIntoView({ behavior: 'smooth' });
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="block w-full text-left py-3 px-4 text-[#021938] font-medium rounded-lg hover:bg-[#41A9F0] hover:text-white transition-colors duration-300"
                     >
                       {item.name}
-                    </a>
+                    </button>
                   ))}
 
                   {/* <button className="w-full bg-[#021938] text-white px-4 py-3 rounded-lg font-semibold inline-flex items-center justify-center gap-2 tracking-tight cursor-pointer hover:bg-[#46AAE1] hover:text-[#021938] transition-all duration-300 mt-4">

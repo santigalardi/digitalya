@@ -3,7 +3,7 @@ import cylinderImage from '../assets/cylinder.svg';
 import noodleImage from '../assets/noodle.svg';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-// import { IoRocketOutline } from 'react-icons/io5';
+import { IoRocketOutline } from 'react-icons/io5';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -26,13 +26,20 @@ const Hero = () => {
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter text-[#021938] mt-4 leading-snug drop-shadow-sm">
               Sitios Web, Correos Corporativos, Hosting y Marketing para impulsar tu
               {/* <br /> */}
-              <span className="text-[#41A9F0] drop-shadow-[0_0_3px_rgba(255,255,255,5)]"> presencia digital.</span>
+              <span className="text-[#41A9F0] drop-shadow-[0_0_1px_rgba(255,255,255,0.8)]"> presencia digital.</span>
             </h2>
 
-            {/* <button className="bg-[#021938] mt-[30px] text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center justify-center gap-2 tracking-tight w-[90%] md:w-auto cursor-pointer hover:bg-[#46AAE1] hover:text-[#021938] hover:scale-105 active:scale-95 transition-all duration-300">
-              <p>Empezar ahora</p>
-              <IoRocketOutline className="text-xl" />
-            </button> */}
+            {/* CTA */}
+            <div className="w-full md:w-5/7 mt-8">
+              <button
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="bg-[#021938] mt-[10px] text-white px-4 py-2 rounded-lg font-medium inline-flex align items justify-center tracking-tight w-full cursor-pointer hover:bg-[#3FA7DE] active:scale-98 transition-colors duration-300"
+              >
+                Empezar Ahora <IoRocketOutline className="m-1 ml-3" />
+              </button>
+            </div>
           </div>
 
           {/* Animaciones decorativas */}

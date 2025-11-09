@@ -30,7 +30,7 @@ const Features = () => {
   ];
 
   return (
-    <section id="services" className="bg-gradient-to-b from-[#E8F7FF] via-[#FFFFFF] to-[#d3edfd] pt-16 pb-24">
+    <section id="services" className="bg-gradient-to-b from-[#E8F7FF] via-[#FFFFFF] to-[#d3edfd] py-22 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-10 text-4xl md:text-5xl text-[#021938] text-center font-bold tracking-tight">
           Soluciones Digitales para tu Negocio
