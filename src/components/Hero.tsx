@@ -3,7 +3,7 @@ import cylinderImage from '../assets/cylinder.svg';
 import noodleImage from '../assets/noodle.svg';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { IoRocketOutline } from 'react-icons/io5';
+import { IoChatbubblesOutline } from 'react-icons/io5';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -17,27 +17,37 @@ const Hero = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="pt-30 pb-20 md:pt-12 md:pb-16 bg-gradient-to-l from-[#021938] via-[#3FA7DE]  to-[#E8F7FF] overflow-x-clip"
+      className="pt-30 pb-20 md:pt-2 md:pb-16 bg-gradient-to-l from-[#3FA7DE]  to-[#E8F7FF] overflow-x-clip"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="md:flex items-center">
           {/* Logo y texto */}
           <div className="md:w-[552px] flex flex-col items-center md:items-start">
-            <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter text-[#021938] mt-4 leading-snug drop-shadow-sm">
-              Sitios Web, Correos Corporativos, Hosting y Marketing para impulsar tu
+            <h2 className="text-4xl md:text-5xl font-bold tracking text-[#021938] mt-4 leading-snug drop-shadow-sm mb-6">
+              Desarrollo Web y Marketing para Marcas que quieren
               {/* <br /> */}
-              <span className="text-[#41A9F0] drop-shadow-[0_0_1px_rgba(255,255,255,0.8)]"> presencia digital.</span>
+              <span className="text-[#3FA7DE] drop-shadow-[0_0_1px_rgba(255,255,255,0.8)]"> crecer.</span>
             </h2>
 
+            <p className="text-[#021938]/80 text-base md:text-lg leading-relaxed max-w-xl text-center md:text-left">
+              No estás solo en el mundo digital. Diseñamos{' '}
+              <b>sitios web que conectan, campañas publicitarias que venden</b> y te damos <b>soporte real 24/7 </b>{' '}
+              para que tu marca crezca sin límites.
+            </p>
+
             {/* CTA */}
-            <div className="w-full md:w-5/7 mt-8">
+            <div className="w-full md:w-4/7 mt-8">
               <button
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-[#021938] mt-[10px] text-white px-4 py-2 rounded-lg font-medium inline-flex align items justify-center tracking-tight w-full cursor-pointer hover:bg-[#3FA7DE] active:scale-98 transition-colors duration-300"
+                className="bg-[#021938] text-white px-4 py-3 rounded-lg font-medium inline-flex items-center justify-center tracking-tight w-full cursor-pointer
+               transition-all
+               shadow-[0_0_0_0_#3FA7DE]
+               hover:shadow-[3px_3px_2px_0px_#00DDFF] transform hover:-translate-x-0.5 hover:-translate-y-0.5"
               >
-                Empezar Ahora <IoRocketOutline className="m-1 ml-3" />
+                Contanos qué necesitás
+                <IoChatbubblesOutline className="m-1 ml-3" />
               </button>
             </div>
           </div>

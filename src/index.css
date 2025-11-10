@@ -1,1 +1,10 @@
 @import 'tailwindcss';
+
+/* Fuente global por defecto */
+@layer base {
+  html {
+    font-family: 'Stack Sans Headline', sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+  }
+}
