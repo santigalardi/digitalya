@@ -27,7 +27,7 @@ const Nosotros = () => {
         {/* Título */}
         <div className="text-center mb-16 md:mb-24">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-10">
-            Un Equipo Humano Dedicado a la Excelencia
+            Un Equipo que Acompaña tu Crecimiento Digital
           </h2>
           <p className="text-xl md:text-2xl text-black">
             Así es como hacemos las cosas en <span className="font-semibold text-[#41A9F0]">DigitalYa</span>

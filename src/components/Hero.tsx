@@ -17,26 +17,26 @@ const Hero = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="pt-30 pb-20 md:pt-2 md:pb-16 bg-gradient-to-l from-[#3FA7DE]  to-[#E8F7FF] overflow-x-clip"
+      className="pt-30 pb-20 md:pt-10 md:pb-16 bg-gradient-to-l from-[#3FA7DE]  to-[#E8F7FF] overflow-x-clip"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="md:flex items-center">
           {/* Logo y texto */}
           <div className="md:w-[552px] flex flex-col items-center md:items-start">
-            <h2 className="text-4xl md:text-5xl font-bold tracking text-[#021938] mt-4 leading-snug drop-shadow-sm mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold tracking text-[#021938] mt-4 leading-snug drop-shadow-sm mb-8">
               Desarrollo Web y Marketing para Marcas que quieren
               {/* <br /> */}
               <span className="text-[#3FA7DE] drop-shadow-[0_0_1px_rgba(255,255,255,0.8)]"> crecer.</span>
             </h2>
 
-            <p className="text-[#021938]/80 text-base md:text-lg leading-relaxed max-w-xl text-center md:text-left">
+            <p className="text-[#021938]/80 text-base md:text-lg leading-relaxed max-w-xl text-center md:text-left mb-12">
               No estás solo en el mundo digital. Diseñamos{' '}
               <b>sitios web que conectan, campañas publicitarias que venden</b> y te damos <b>soporte real 24/7 </b>{' '}
               para que tu marca crezca sin límites.
             </p>
 
             {/* CTA */}
-            <div className="w-full md:w-4/7 mt-8">
+            <div className="w-full md:w-4/7">
               <button
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
