@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import { Toaster } from 'sonner';
 import NavBar from './components/NavBar';
 import Nosotros from './components/Nosotros';
+import WhatsAppButton from './components/WhatsappButton';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Contact />
       <Toaster />
       <Footer />
+      <WhatsAppButton />
     </>
   );
 };
