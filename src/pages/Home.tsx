@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 // import LogoTicker from '../components/LogoTicker';
 import { Toaster } from 'sonner';
 import NavBar from '../components/NavBar';
-import Nosotros from '../components/Nosotros';
+import Nosotros from '../components/About';
 import WhatsAppButton from '../components/WhatsappButton';
 
 const Home = () => {

@@ -1,11 +1,11 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Users, Brush, Headphones } from 'lucide-react';
-import personalization from '../assets/digitalya/personalizacion.jpeg';
-import comprension from '../assets/digitalya/comprension.jpeg';
-import support from '../assets/digitalya/support.jpeg';
+import webbg from '../assets/digitalya/webbg.png';
+import webbg5 from '../assets/digitalya/webbg5.png';
+import webbg7 from '../assets/digitalya/webbg7.png';
 
-const Nosotros = () => {
+const About = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -87,11 +87,7 @@ const Nosotros = () => {
 
           {/* Imagen */}
           <div className="w-full md:w-1/2 flex justify-center p-6">
-            <img
-              src={comprension}
-              alt="Comprensión profunda"
-              className="w-4/5 md:w-4/5 max-w-md object-cover rounded-2xl shadow-lg"
-            />
+            <img src={webbg5} alt="Comprensión profunda" className="w-4/5 md:w-4/5 max-w-md object-cover" />
           </div>
         </motion.div>
 
@@ -117,11 +113,7 @@ const Nosotros = () => {
 
           {/* Imagen */}
           <div className="w-full md:w-1/2 flex justify-center p-6">
-            <img
-              src={personalization}
-              alt="Diseño y personalización"
-              className="w-4/5 md:w-4/5 max-w-md object-cover rounded-2xl shadow-lg"
-            />
+            <img src={webbg} alt="Diseño y personalización" className="w-4/5 md:w-4/5 max-w-md object-cover" />
           </div>
         </motion.div>
 
@@ -144,11 +136,7 @@ const Nosotros = () => {
 
           {/* Imagen */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <img
-              src={support}
-              alt="Soporte continuo"
-              className="w-4/5 md:w-4/5 max-w-md object-cover bg-white rounded-2xl shadow-lg p-6"
-            />
+            <img src={webbg7} alt="Soporte continuo" className="w-4/5 md:w-4/5 max-w-md object-cover" />
           </div>
         </motion.div>
       </div>
@@ -156,4 +144,4 @@ const Nosotros = () => {
   );
 };
 
-export default Nosotros;
+export default About;

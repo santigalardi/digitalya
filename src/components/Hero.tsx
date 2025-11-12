@@ -20,10 +20,10 @@ const Hero = () => {
       className="pt-30 pb-20 md:pt-10 md:pb-16 bg-gradient-to-l from-[#3FA7DE]  to-[#E8F7FF] overflow-x-clip"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="md:flex items-center">
+        <div className="flex flex-col items-center md:flex-row">
           {/* Logo y texto */}
           <div className="md:w-[552px] flex flex-col items-center md:items-start">
-            <h2 className="text-4xl md:text-5xl font-bold tracking text-[#021938] mt-4 leading-snug drop-shadow-sm mb-8">
+            <h2 className="text-4xl text-center md:text-start md:text-5xl font-bold tracking text-[#021938] mt-4 leading-snug drop-shadow-sm mb-8">
               Desarrollo Web y Marketing para Marcas que quieren
               {/* <br /> */}
               <span className="text-[#3FA7DE] drop-shadow-[0_0_1px_rgba(255,255,255,0.8)]"> crecer.</span>

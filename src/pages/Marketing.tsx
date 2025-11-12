@@ -1,4 +1,4 @@
-import HeroWebDev from '../components/HeroWebDev';
+import HeroMarketing from '../components/HeroMarketing';
 import Features from '../components/Features';
 // import Testimonials from '../components/Testimonials';
 // import Pricing from '../components/Pricing';
@@ -9,18 +9,19 @@ import { Toaster } from 'sonner';
 import NavBar from '../components/NavBar';
 // import Nosotros from '../components/About';
 import WhatsAppButton from '../components/WhatsappButton';
-import WhyChooseUs from '../components/WhyChooseUs';
 import FaqSection from '../components/FaqSection';
+import WhyChooseUs from '../components/WhyChooseUs';
 
 const WebDevelopment = () => {
   return (
     <>
       <NavBar />
-      <HeroWebDev />
+      <HeroMarketing />
       {/* <LogoTicker /> */}
       <Features />
       <WhyChooseUs />
       <FaqSection />
+      {/* <Nosotros /> */}
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
       <Contact />
