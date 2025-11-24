@@ -3,7 +3,7 @@ import cylinderImage from '../assets/cylinder.svg';
 import noodleImage from '../assets/noodle.svg';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { IoChatbubblesOutline } from 'react-icons/io5';
+import { IoCalendarOutline, IoChatbubblesOutline } from 'react-icons/io5';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center md:flex-row">
           {/* Logo y texto */}
-          <div className="md:w-[552px] flex flex-col items-center md:items-start">
+          <div className="md:w-[552px] flex flex-col items-center md:items-start space-y-0">
             <h2 className="text-4xl text-center md:text-start md:text-5xl font-bold tracking text-[#021938] mt-4 leading-snug drop-shadow-sm mb-8">
               Desarrollo Web y Marketing para Marcas que quieren
               {/* <br /> */}
@@ -35,20 +35,36 @@ const Hero = () => {
               para que tu marca crezca sin límites.
             </p>
 
-            {/* CTA */}
-            <div className="w-full md:w-4/7">
+            {/* Botones CTA */}
+            <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto mt-4">
+              {/* CTA Principal */}
               <button
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-[#021938] text-white px-4 py-3 rounded-lg font-medium inline-flex items-center justify-center tracking-tight w-full cursor-pointer
-               transition-all
-               shadow-[0_0_0_0_#3FA7DE]
-               hover:shadow-[3px_3px_2px_0px_#00DDFF] transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+                className="bg-[#021938] text-white px-5 py-3 rounded-xl font-medium inline-flex items-center justify-center
+    transition-all shadow-[0_0_0_0_#3FA7DE] hover:shadow-[3px_3px_2px_0px_#00DDFF]
+    transform hover:-translate-x-0.5 hover:-translate-y-0.5
+    w-full md:w-auto cursor-pointer"
               >
                 Contanos qué necesitás
-                <IoChatbubblesOutline className="m-1 ml-3" />
+                <IoChatbubblesOutline className="ml-3 text-xl" />
               </button>
+
+              {/* CTA Secundario: Calendly */}
+              <a
+                href="https://calendly.com/jignaciosolari/impulsa-tu-marca-con-digitalya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-3 rounded-xl font-medium text-[#021938] border border-[#021938]/30
+    bg-white/60 backdrop-blur-sm inline-flex items-center justify-center gap-2
+    hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all
+    hover:shadow-[3px_3px_2px_0px_#00DDFF] hover:border-[#021938]
+    w-full md:w-auto cursor-pointer"
+              >
+                <IoCalendarOutline className="text-xl" />
+                Agendar reunión
+              </a>
             </div>
           </div>
 

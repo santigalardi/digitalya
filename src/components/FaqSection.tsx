@@ -7,35 +7,11 @@ interface FaqItem {
   answer: string;
 }
 
-const faqs: FaqItem[] = [
-  {
-    question: '¿Cuánto tarda en desarrollarse un sitio web?',
-    answer:
-      'Depende del tipo de proyecto. En promedio, un sitio institucional puede estar listo entre 2 y 4 semanas, mientras que proyectos más complejos pueden requerir más tiempo.',
-  },
-  {
-    question: '¿Ofrecen mantenimiento después de publicar el sitio?',
-    answer:
-      'Sí. Todos nuestros servicios incluyen soporte 24/7 con llamadas y mensajería. Estamos aqui para ayudarte en todo momento.',
-  },
-  {
-    question: '¿Qué necesito para comenzar?',
-    answer:
-      'Solo una idea clara de tu negocio o marca. Nosotros te ayudamos a definir la estructura, el diseño y todo el contenido necesario para lanzarte al mundo digital u optimizar lo que ya tenés para lograr mayor conversión.',
-  },
-  {
-    question: '¿Puedo solicitar solo el servicio de desarrollo o solo el de marketing?',
-    answer:
-      'Por supuesto. Nuestros servicios son totalmente modulares, por lo que podés contratar únicamente desarrollo web, marketing digital o ambos en conjunto.',
-  },
-  {
-    question: '¿Trabajan con proyectos internacionales?',
-    answer:
-      'Sí, colaboramos con clientes de distintas partes del mundo de manera 100% remota, adaptándonos a su idioma y zona horaria.',
-  },
-];
+interface FaqSectionProps {
+  faqs: FaqItem[];
+}
 
-const FaqSection = () => {
+const FaqSection = ({ faqs }: FaqSectionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -44,11 +20,11 @@ const FaqSection = () => {
 
   return (
     <section className="bg-gradient-to-b from-[#FFFFFF] via-[#E8F7FF] to-[#d3edfd] py-20 md:py-28">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-[#021938] text-center mb-12">Preguntas Frecuentes</h2>
 
         <Reveal>
-          <div className="space-y-6 ">
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div
                 key={index}

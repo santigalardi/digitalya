@@ -11,6 +11,7 @@ import NavBar from '../components/NavBar';
 import WhatsAppButton from '../components/WhatsappButton';
 import WhyChooseUs from '../components/WhyChooseUs';
 import FaqSection from '../components/FaqSection';
+import { faqsWeb } from '../data/faqsWeb';
 
 const WebDevelopment = () => {
   return (
@@ -20,7 +21,7 @@ const WebDevelopment = () => {
       {/* <LogoTicker /> */}
       <Features />
       <WhyChooseUs />
-      <FaqSection />
+      <FaqSection faqs={faqsWeb} />
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
       <Contact />

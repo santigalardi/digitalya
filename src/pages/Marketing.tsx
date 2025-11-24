@@ -11,8 +11,9 @@ import NavBar from '../components/NavBar';
 import WhatsAppButton from '../components/WhatsappButton';
 import FaqSection from '../components/FaqSection';
 import WhyChooseUs from '../components/WhyChooseUs';
+import { faqsMarketing } from '../data/faqsMarketing';
 
-const WebDevelopment = () => {
+const Marketing = () => {
   return (
     <>
       <NavBar />
@@ -20,7 +21,7 @@ const WebDevelopment = () => {
       {/* <LogoTicker /> */}
       <Features />
       <WhyChooseUs />
-      <FaqSection />
+      <FaqSection faqs={faqsMarketing} />
       {/* <Nosotros /> */}
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
@@ -32,4 +33,4 @@ const WebDevelopment = () => {
   );
 };
 
-export default WebDevelopment;
+export default Marketing;

@@ -63,7 +63,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-22 md:py-28 bg-gradient-to-b from-white to-[#d3edfd]">
+    <section id="contact" className="py-20 bg-gradient-to-b from-white to-[#d3edfd]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-5xl text-[#021938] text-center font-bold tracking-tight">Contacto</h2>
         <p className="text-2xl text-center mt-10">Completá el formulario y te responderemos a la brevedad.</p>

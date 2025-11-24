@@ -20,7 +20,7 @@ const HeroMarketing = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center md:flex-row">
           {/* Texto principal */}
-          <div className="md:w-[552px] flex flex-col items-center md:items-start">
+          <div className="md:w-[552px] flex flex-col items-center md:items-start space-y-0">
             <h2 className="text-4xl text-center md:text-start md:text-5xl font-bold text-[#021938] mt-4 leading-snug drop-shadow-sm mb-8">
               Marketing Digital que genera{' '}
               <span className="text-[#3FA7DE] drop-shadow-[0_0_1px_rgba(255,255,255,0.8)]">resultados.</span>
@@ -31,19 +31,35 @@ const HeroMarketing = () => {
               Aumentá tu visibilidad, atraé nuevos clientes y hacé crecer tu negocio de forma medible y sostenible.
             </p>
 
-            {/* Botón CTA */}
-            <div className="w-full md:w-4/7">
+            {/* Botones CTA — mismos estilos que el resto del sitio */}
+            <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto mt-4">
+              {/* CTA principal */}
               <button
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-[#021938] text-white px-4 py-3 rounded-lg font-medium inline-flex items-center justify-center tracking-tight w-full cursor-pointer
-                transition-all shadow-[0_0_0_0_#3FA7DE]
-                hover:shadow-[3px_3px_2px_0px_#00DDFF] transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+                className="bg-[#021938] text-white px-5 py-3 rounded-xl font-medium inline-flex items-center justify-center 
+    shadow-[0_0_0_0_#3FA7DE] transition-all hover:shadow-[3px_3px_2px_0px_#00DDFF]
+    hover:-translate-x-0.5 hover:-translate-y-0.5 w-full md:w-auto cursor-pointer"
               >
                 Quiero impulsar mi marca
-                <IoRocketOutline className="m-1 ml-3" />
+                <IoRocketOutline className="ml-3 text-xl" />
               </button>
+
+              {/* CTA secundario */}
+              <a
+                href="https://calendly.com/jignaciosolari/impulsa-tu-marca-con-digitalya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-3 rounded-xl font-medium text-[#021938] border border-[#021938]/30
+    bg-white/60 backdrop-blur-sm inline-flex items-center justify-center gap-2
+    transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 
+    hover:shadow-[3px_3px_2px_0px_#00DDFF] hover:border-[#021938]
+    w-full md:w-auto cursor-pointer"
+              >
+                <IoRocketOutline className="text-xl" />
+                Agendar reunión
+              </a>
             </div>
           </div>
 
