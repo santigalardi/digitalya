@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+Allow: /desarrollo-web
+Allow: /marketing
+
+Sitemap: https://digitalya.com.ar/sitemap.xml
