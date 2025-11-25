@@ -1,9 +1,9 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Users, Brush, Headphones } from 'lucide-react';
-import webbg from '../assets/digitalya/webbg.png';
-import webbg5 from '../assets/digitalya/webbg5.png';
-import webbg7 from '../assets/digitalya/webbg7.png';
+import webbg from '../assets/digitalya/webbg.webp';
+import webbg5 from '../assets/digitalya/webbg5.webp';
+import webbg7 from '../assets/digitalya/webbg7.webp';
 
 const About = () => {
   const ref = useRef(null);

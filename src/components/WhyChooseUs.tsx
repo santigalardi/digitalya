@@ -1,5 +1,5 @@
 import { CheckCircle, Target, BarChart3, Wallet, Users } from 'lucide-react';
-import heroWebImage from '../assets/digitalya/webbg8.png';
+import heroWebImage from '../assets/digitalya/webbg8.webp';
 
 export default function WhyChooseUs() {
   const reasons = [

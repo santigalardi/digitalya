@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { IoCalendarOutline, IoChatbubblesOutline } from 'react-icons/io5';
-import heroWebImage from '../assets/digitalya/webbg4.png';
+import heroWebImage from '../assets/digitalya/webbg4.webp';
 
 const HeroWebDev = () => {
   const heroRef = useRef(null);

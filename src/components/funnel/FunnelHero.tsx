@@ -1,7 +1,7 @@
 import digitalyaLogo from '../../assets/digitalya/logo-nobg.png';
 import { IoRocketOutline, IoCalendarOutline } from 'react-icons/io5';
 import { motion } from 'framer-motion';
-import heroMarketingImage from '../../assets/digitalya/webbg2.png';
+import heroMarketingImage from '../../assets/digitalya/webbg2.webp';
 
 const FunnelHero = () => {
   return (
