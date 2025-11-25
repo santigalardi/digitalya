@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { IoRocketOutline } from 'react-icons/io5';
+import { IoCalendarOutline, IoRocketOutline } from 'react-icons/io5';
 import heroMarketingImage from '../assets/digitalya/webbg2.png'; // ← ajustá el nombre según tu imagen real
 
 const HeroMarketing = () => {
@@ -46,20 +46,18 @@ const HeroMarketing = () => {
                 <IoRocketOutline className="ml-3 text-xl" />
               </button>
 
-              {/* CTA secundario */}
-              <a
-                href="https://calendly.com/jignaciosolari/impulsa-tu-marca-con-digitalya"
-                target="_blank"
-                rel="noopener noreferrer"
+              {/* CTA Secundario: Calendly */}
+              <button
+                onClick={() => document.getElementById('calendly')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-5 py-3 rounded-xl font-medium text-[#021938] border border-[#021938]/30
-    bg-white/60 backdrop-blur-sm inline-flex items-center justify-center gap-2
-    transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 
-    hover:shadow-[3px_3px_2px_0px_#00DDFF] hover:border-[#021938]
-    w-full md:w-auto cursor-pointer"
+                            bg-white/60 backdrop-blur-sm inline-flex items-center justify-center gap-2
+                            hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all
+                            hover:shadow-[3px_3px_2px_0px_#00DDFF] hover:border-[#021938]
+                            w-full md:w-auto cursor-pointer"
               >
-                <IoRocketOutline className="text-xl" />
+                <IoCalendarOutline className="text-xl" />
                 Agendar reunión
-              </a>
+              </button>
             </div>
           </div>
 

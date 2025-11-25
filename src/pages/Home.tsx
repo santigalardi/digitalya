@@ -9,6 +9,7 @@ import { Toaster } from 'sonner';
 import NavBar from '../components/NavBar';
 import Nosotros from '../components/About';
 import WhatsAppButton from '../components/WhatsappButton';
+import CalendlyEmbed from '../components/CalendlyEmbed';
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Nosotros />
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
+      <CalendlyEmbed />
       <Contact />
       <Toaster />
       <Footer />

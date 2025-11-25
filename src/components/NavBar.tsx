@@ -72,7 +72,7 @@ const NavBar = () => {
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-12 relative">
+            <div className="hidden md:flex items-center gap-12 relative text-center">
               {navItems.map((item) =>
                 item.type === 'dropdown' ? (
                   <div
@@ -83,7 +83,7 @@ const NavBar = () => {
                   >
                     <button
                       onClick={() => handleScrollOrNavigate('services')}
-                      className={`flex items-center gap-1 font-medium text-md tracking-tight transition-colors duration-300 bg-transparent border-none cursor-pointer ${
+                      className={`flex items-center text-center gap-1 font-medium text-md tracking-tight transition-colors duration-300 bg-transparent border-none cursor-pointer ${
                         isScrolled ? 'text-[#021938] hover:text-[#41A9F0]' : 'text-white hover:text-[#021938]'
                       }`}
                     >

@@ -12,6 +12,7 @@ import WhatsAppButton from '../components/WhatsappButton';
 import FaqSection from '../components/FaqSection';
 import WhyChooseUs from '../components/WhyChooseUs';
 import { faqsMarketing } from '../data/faqsMarketing';
+import CalendlyEmbed from '../components/CalendlyEmbed';
 
 const Marketing = () => {
   return (
@@ -22,6 +23,7 @@ const Marketing = () => {
       <Features />
       <WhyChooseUs />
       <FaqSection faqs={faqsMarketing} />
+      <CalendlyEmbed />
       {/* <Nosotros /> */}
       {/* <Testimonials /> */}
       {/* <Pricing /> */}

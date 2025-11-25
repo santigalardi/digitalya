@@ -7,6 +7,8 @@ import Footer from '../components/Footer';
 import { Toaster } from 'sonner';
 import WhatsAppButton from '../components/WhatsappButton';
 import CalendlyEmbed from '../components/CalendlyEmbed';
+import FaqSection from '../components/FaqSection';
+import { faqsMarketing } from '../data/faqsMarketing';
 
 const MarketingFunnel = () => {
   return (
@@ -15,6 +17,7 @@ const MarketingFunnel = () => {
       <FunnelPainPoints />
       <FunnelBenefits />
       <FunnelOffer />
+      <FaqSection faqs={faqsMarketing} />
       <CalendlyEmbed />
       <Contact />
       <Toaster />
