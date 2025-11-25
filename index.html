@@ -1,17 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo-miniatura.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ====== SEO BÁSICO ====== -->
     <title>DigitalYa | Soluciones Digitales para tu Negocio</title>
+    <meta
+      name="description"
+      content="Diseñamos sitios web que conectan, campañas publicitarias que venden y soporte real 24/7 para que tu marca crezca. DigitalYa: Soluciones digitales para tu negocio."
+    />
+
+    <!-- ====== FAVICONS ====== -->
+    <link rel="icon" href="/logo-miniatura.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/logo-miniatura.png" />
+
+    <!-- ====== OPEN GRAPH (Facebook / WhatsApp / LinkedIn) ====== -->
+    <meta property="og:title" content="DigitalYa | Soluciones Digitales para tu Negocio" />
+    <meta
+      property="og:description"
+      content="Diseñamos sitios web que conectan, campañas publicitarias que venden y soporte real 24/7 para que tu marca crezca."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://digitalya.com.ar" />
+    <meta property="og:image" content="https://digitalya.com.ar/logo-miniatura.png" />
+    <meta property="og:image:width" content="222" />
+    <meta property="og:image:height" content="222" />
+
+    <!-- ====== TWITTER CARDS ====== -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="DigitalYa | Soluciones Digitales para tu Negocio" />
+    <meta
+      name="twitter:description"
+      content="Soluciones digitales, diseño web, campañas publicitarias y soporte real 24/7."
+    />
+    <meta name="twitter:image" content="https://digitalya.com.ar/logo-miniatura.png" />
+
+    <!-- ====== FONTS ====== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap"
       rel="stylesheet"
     />
-    <!-- Google tag (gtag.js) -->
+
+    <!-- ====== SCHEMA: ORGANIZATION ====== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "DigitalYa",
+        "url": "https://digitalya.com.ar",
+        "logo": "https://digitalya.com.ar/logo-miniatura.png"
+      }
+    </script>
+
+    <!-- ====== GOOGLE TAG ====== -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L0VPG0QMX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -19,10 +63,10 @@
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
-
       gtag('config', 'G-2L0VPG0QMX');
     </script>
   </head>
+
   <body style="min-width: 320px">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
