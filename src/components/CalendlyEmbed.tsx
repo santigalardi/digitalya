@@ -72,7 +72,6 @@ const CalendlyEmbed = () => {
       const old = section?.querySelector('.calendly-inline-widget');
       if (old) old.remove();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]); // <- re-ejecuta en cada cambio de ruta
 
   return (
