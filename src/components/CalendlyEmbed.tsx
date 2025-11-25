@@ -1,66 +1,40 @@
 // CalendlyEmbed.tsx
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
-declare global {
-  interface Window {
-    Calendly?: {
-      initInlineWidget: (options: {
-        url: string;
-        parentElement: Element | null;
-        prefill?: object;
-        utm?: object;
-      }) => void;
-    };
-  }
-}
+import { useEffect, useRef } from 'react';
 
 const CalendlyEmbed = () => {
-  const location = useLocation();
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const container = document.querySelector('.calendly-inline-widget');
-    if (!container) return;
-
-    // limpiar contenido previo
-    container.innerHTML = '';
-
-    const initWidget = () => {
-      window.Calendly?.initInlineWidget({
-        url: 'https://calendly.com/jignaciosolari/impulsa-tu-marca-con-digitalya',
-        parentElement: container,
-        prefill: {},
-        utm: {},
-      });
-    };
-
-    // Si el script ya está cargado, inicializamos
-    if (window.Calendly) {
-      initWidget();
+    // Inserta el script solo si no existe
+    if (!document.getElementById('calendly-widget-script')) {
+      const script = document.createElement('script');
+      script.id = 'calendly-widget-script';
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      document.body.appendChild(script);
     } else {
-      // Si no, insertamos el script y lo inicializamos al cargar
-      if (!document.getElementById('calendly-widget-script')) {
-        const script = document.createElement('script');
-        script.id = 'calendly-widget-script';
-        script.src = 'https://assets.calendly.com/assets/external/widget.js';
-        script.async = true;
-        script.onload = initWidget;
-        document.body.appendChild(script);
-      } else {
-        // Script ya existe pero Calendly puede no estar listo
-        const interval = setInterval(() => {
-          if (window.Calendly) {
-            clearInterval(interval);
-            initWidget();
-          }
-        }, 100);
+      // Si el script ya está cargado, recarga el widget
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const w = window as any; // <- ignoramos el tipo para TS
+      if (w.Calendly && containerRef.current) {
+        containerRef.current.innerHTML = ''; // limpia contenido previo
+        w.Calendly.initInlineWidget({
+          url: 'https://calendly.com/jignaciosolari/impulsa-tu-marca-con-digitalya',
+          parentElement: containerRef.current,
+          prefill: {},
+          utm: {},
+        });
       }
     }
-  }, [location.pathname]); // 🔹 se ejecuta cada vez que cambia la ruta
+
+    return () => {
+      if (containerRef.current) containerRef.current.innerHTML = '';
+    };
+  }, []);
 
   return (
     <section id="calendly" className="bg-gradient-to-b from-white to-[#d3edfd]">
-      <div className="calendly-inline-widget" style={{ minWidth: '320px', height: '760px' }}></div>
+      <div ref={containerRef} className="calendly-inline-widget" style={{ minWidth: '320px', height: '760px' }}></div>
     </section>
   );
 };
