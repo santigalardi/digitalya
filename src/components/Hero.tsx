@@ -51,7 +51,7 @@ const Hero = () => {
                 <IoChatbubblesOutline className="ml-3 text-xl" />
               </button>
 
-              {/* CTA Secundario: Calendly
+              {/* CTA Secundario: Calendly */}
               <a
                 href="https://calendly.com/jignaciosolari/impulsa-tu-marca-con-digitalya"
                 target="_blank"
@@ -64,20 +64,7 @@ const Hero = () => {
               >
                 <IoCalendarOutline className="text-xl" />
                 Agendar reunión
-              </a> */}
-
-              {/* CTA Secundario: Calendly */}
-              <button
-                onClick={() => document.getElementById('calendly')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-5 py-3 rounded-xl font-medium text-[#021938] border border-[#021938]/30
-              bg-white/60 backdrop-blur-sm inline-flex items-center justify-center gap-2
-              hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all
-              hover:shadow-[3px_3px_2px_0px_#00DDFF] hover:border-[#021938]
-              w-full md:w-auto cursor-pointer"
-              >
-                <IoCalendarOutline className="text-xl" />
-                Agendar reunión
-              </button>
+              </a>
             </div>
           </div>
 
