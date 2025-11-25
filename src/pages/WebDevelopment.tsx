@@ -25,7 +25,7 @@ const WebDevelopment = () => {
       <FaqSection faqs={faqsWeb} />
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
-      <CalendlyEmbed />
+      <CalendlyEmbed type="Web" />
       <Contact />
       <Toaster />
       <Footer />

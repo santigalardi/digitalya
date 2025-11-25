@@ -8,17 +8,17 @@ import { Toaster } from 'sonner';
 import WhatsAppButton from '../components/WhatsappButton';
 import CalendlyEmbed from '../components/CalendlyEmbed';
 import FaqSection from '../components/FaqSection';
-import { faqsMarketing } from '../data/faqsMarketing';
+import { faqsWeb } from '../data/faqsWeb';
 
 const WebFunnel = () => {
   return (
     <>
-      <FunnelHero />
-      <FunnelPainPoints />
-      <FunnelBenefits />
-      <FunnelOffer />
-      <FaqSection faqs={faqsMarketing} />
-      <CalendlyEmbed />
+      <FunnelHero type="web" />
+      <FunnelPainPoints type="web" />
+      <FunnelBenefits type="Web" />
+      <FunnelOffer type="Web" />
+      <FaqSection faqs={faqsWeb} />
+      <CalendlyEmbed type="Web" />
       <Contact />
       <Toaster />
       <Footer />

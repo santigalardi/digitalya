@@ -13,12 +13,12 @@ import { faqsMarketing } from '../data/faqsMarketing';
 const MarketingFunnel = () => {
   return (
     <>
-      <FunnelHero />
-      <FunnelPainPoints />
-      <FunnelBenefits />
-      <FunnelOffer />
+      <FunnelHero type="marketing" />
+      <FunnelPainPoints type="marketing" />
+      <FunnelBenefits type="Marketing" />
+      <FunnelOffer type="Marketing" />
       <FaqSection faqs={faqsMarketing} />
-      <CalendlyEmbed />
+      <CalendlyEmbed type="Marketing" />
       <Contact />
       <Toaster />
       <Footer />

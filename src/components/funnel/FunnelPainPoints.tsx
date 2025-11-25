@@ -1,53 +1,81 @@
-import { FiTrendingDown, FiClock, FiXCircle } from 'react-icons/fi';
+import { FiTrendingDown, FiClock, FiXCircle, FiGlobe, FiAlertTriangle, FiSliders } from 'react-icons/fi';
 
-const FunnelPainPoints = () => {
+interface FunnelPainPointsProps {
+  type: 'marketing' | 'web';
+}
+
+const FunnelPainPoints = ({ type }: FunnelPainPointsProps) => {
+  const isMarketing = type === 'marketing';
+
+  const data = isMarketing
+    ? {
+        title: '¿Te está costando hacer crecer tu negocio?',
+        subtitle: 'Estas son algunas señales de que tu marketing actual no está funcionando como debería:',
+        items: [
+          {
+            icon: FiTrendingDown,
+            title: 'Pocas consultas o ventas',
+            description: 'Publicás contenido pero no ves resultados reales ni clientes nuevos.',
+          },
+          {
+            icon: FiClock,
+            title: 'Perdés tiempo probando al azar',
+            description: 'Subís anuncios sin estrategia clara y terminan siendo un gasto, no una inversión.',
+          },
+          {
+            icon: FiXCircle,
+            title: 'No sabés qué funciona',
+            description: 'No tenés métricas claras ni una estrategia que puedas escalar con seguridad.',
+          },
+        ],
+      }
+    : {
+        title: '¿Tu sitio web no está generando resultados?',
+        subtitle: 'Si te pasa alguna de estas cosas, tu web necesita una mejora urgente:',
+        items: [
+          {
+            icon: FiGlobe,
+            title: 'Tu página no convierte',
+            description: 'Tenés visitas, pero casi nadie te escribe ni compra.',
+          },
+          {
+            icon: FiSliders,
+            title: 'Se ve desactualizada o lenta',
+            description: 'El diseño no refleja tu nivel profesional o la página tarda mucho en cargar.',
+          },
+          {
+            icon: FiAlertTriangle,
+            title: 'No aparecés en Google',
+            description: 'Sin SEO ni optimización técnica, tus clientes ni siquiera te encuentran.',
+          },
+        ],
+      };
+
   return (
     <section className="py-20 bg-white">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        {/* Título */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#021938] mb-10">
-          ¿Te está costando hacer crecer tu negocio?
-        </h2>
+        {/* TÍTULO */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#021938] mb-10">{data.title}</h2>
 
-        {/* Subtítulo */}
-        <p className="text-center text-[#021938]/70 max-w-2xl mx-auto mb-16 text-lg">
-          Estas son algunas señales de que tu marketing actual no está funcionando como debería:
-        </p>
+        {/* SUBTÍTULO */}
+        <p className="text-center text-[#021938]/70 max-w-2xl mx-auto mb-16 text-lg">{data.subtitle}</p>
 
-        {/* Grid */}
+        {/* GRID */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {/* Ítem 1 */}
-          <div className="bg-white/30 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-300 rounded-2xl p-8 group">
-            <div className="flex justify-center mb-6">
-              <FiTrendingDown className="text-5xl text-[#3FA7DE]" />
-            </div>
-            <h3 className="text-xl font-bold text-[#021938] mb-3 text-center">Pocas consultas o ventas</h3>
-            <p className="text-[#021938]/70 text-center">
-              Publicás contenido pero no ves resultados reales ni clientes nuevos.
-            </p>
-          </div>
+          {data.items.map((item, i) => (
+            <div
+              key={i}
+              className="bg-white/30 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-300 rounded-2xl p-8 group"
+            >
+              <div className="flex justify-center mb-6">
+                <item.icon className="text-5xl text-[#3FA7DE]" />
+              </div>
 
-          {/* Ítem 2 */}
-          <div className="bg-white/30 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-300 rounded-2xl p-8 group">
-            <div className="flex justify-center mb-6">
-              <FiClock className="text-5xl text-[#3FA7DE]" />
-            </div>
-            <h3 className="text-xl font-bold text-[#021938] mb-3 text-center">Perdés tiempo probando al azar</h3>
-            <p className="text-[#021938]/70 text-center">
-              Subís anuncios sin estrategia clara y terminan siendo un gasto, no una inversión.
-            </p>
-          </div>
+              <h3 className="text-xl font-bold text-[#021938] mb-3 text-center">{item.title}</h3>
 
-          {/* Ítem 3 */}
-          <div className="bg-white/30 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-all duration-300 rounded-2xl p-8 group">
-            <div className="flex justify-center mb-6">
-              <FiXCircle className="text-5xl text-[#3FA7DE]" />
+              <p className="text-[#021938]/70 text-center">{item.description}</p>
             </div>
-            <h3 className="text-xl font-bold text-[#021938] mb-3 text-center">No sabés qué funciona</h3>
-            <p className="text-[#021938]/70 text-center">
-              No tenés métricas claras ni una estrategia que puedas escalar con seguridad.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

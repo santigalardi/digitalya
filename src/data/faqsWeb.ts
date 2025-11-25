@@ -1,13 +1,13 @@
 export const faqsWeb = [
   {
-    question: '¿Cuánto tarda en desarrollarse un sitio web?',
+    question: '¿En qué se diferencia un sitio profesional de uno hecho con plantillas baratas o constructores?',
     answer:
-      'Depende del tipo de proyecto. En promedio, un sitio institucional puede estar listo entre 2 y 4 semanas, mientras que proyectos más complejos pueden requerir más tiempo.',
+      'Un sitio profesional está hecho para convertir y crecer. Las plantillas solo se ven “lindas”, pero son lentas, genéricas y limitadas. Un sitio profesional carga más rápido, posiciona mejor, se adapta a tu marca y evita problemas técnicos y de seguridad.',
   },
   {
-    question: '¿Ofrecen mantenimiento después de publicar el sitio?',
+    question: '¿Cuánto tarda en desarrollarse un sitio web?',
     answer:
-      'Sí. Todos nuestros servicios incluyen soporte 24/7 con llamadas y mensajería. Estamos aquí para ayudarte en todo momento.',
+      'En promedio, un sitio web puede estar listo entre 2 y 4 semanas, mientras que proyectos más complejos pueden requerir más tiempo.',
   },
   {
     question: '¿Qué necesito para comenzar?',
@@ -15,13 +15,14 @@ export const faqsWeb = [
       'Solo una idea clara de tu negocio o marca. Nosotros te ayudamos a definir la estructura, el diseño y todo el contenido necesario.',
   },
   {
-    question: '¿Puedo solicitar solo el servicio de desarrollo o solo el de marketing?',
+    question: '¿Ofrecen mantenimiento después de publicar el sitio?',
     answer:
-      'Por supuesto. Nuestros servicios son completamente modulares. Podés contratar solo desarrollo, marketing o ambos.',
+      'Sí. Todos nuestros servicios incluyen soporte 24/7 con llamadas y mensajería. Estamos aquí para ayudarte en todo momento.',
   },
+
   {
-    question: '¿Trabajan con proyectos internacionales?',
+    question: '¿Cómo garantizan que el sitio genere resultados?',
     answer:
-      'Sí, colaboramos con clientes de distintas partes del mundo de manera remota, adaptándonos a su zona horaria.',
+      'Diseñamos cada sección con foco en conversiones: textos persuasivos, CTAs estratégicos y velocidad optimizada. No entregamos ‘lindas páginas’, entregamos herramientas que generen resultados.',
   },
 ];

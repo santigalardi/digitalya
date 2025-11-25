@@ -23,7 +23,7 @@ const Marketing = () => {
       <Features />
       <WhyChooseUs />
       <FaqSection faqs={faqsMarketing} />
-      <CalendlyEmbed />
+      <CalendlyEmbed type="Marketing" />
       {/* <Nosotros /> */}
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
