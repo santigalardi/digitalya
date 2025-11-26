@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { IoCalendarOutline, IoChatbubblesOutline } from 'react-icons/io5';
 import heroWebImage from '../assets/digitalya/webbg4.webp';
+import cloudbg from '../assets/digitalya/cloudbg.jpg';
 
 const HeroWebDev = () => {
   const heroRef = useRef(null);
@@ -15,8 +16,16 @@ const HeroWebDev = () => {
     <section
       id="hero-web"
       ref={heroRef}
-      className="pt-36 pb-12 md:pt-20 md:pb-20 bg-gradient-to-l from-[#3FA7DE] to-[#E8F7FF] overflow-x-clip"
+      className="relative pt-36 pb-12 md:pt-20 md:pb-20 bg-gradient-to-l from-[#3FA7DE] to-[#E8F7FF] overflow-x-clip"
     >
+      <div
+        className="absolute inset-0 w-full h-full opacity-35 mix-blend-overlay pointer-events-none select-none"
+        style={{
+          backgroundImage: `url(${cloudbg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center md:flex-row">
           {/* Texto principal */}

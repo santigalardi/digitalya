@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { IoCalendarOutline, IoRocketOutline } from 'react-icons/io5';
 import heroMarketingImage from '../assets/digitalya/webbg2.webp'; // ← ajustá el nombre según tu imagen real
+import cloudbg from '../assets/digitalya/cloudbg.jpg';
 
 const HeroMarketing = () => {
   const heroRef = useRef(null);
@@ -15,8 +16,16 @@ const HeroMarketing = () => {
     <section
       id="hero-marketing"
       ref={heroRef}
-      className="pt-36 pb-12 md:pt-20 md:pb-20 bg-gradient-to-r from-[#E8F7FF] to-[#3FA7DE] overflow-x-clip"
+      className="relative pt-36 pb-12 md:pt-20 md:pb-20 bg-gradient-to-r from-[#E8F7FF] to-[#3FA7DE] overflow-x-clip"
     >
+      <div
+        className="absolute inset-0 w-full h-full opacity-35 mix-blend-overlay pointer-events-none select-none"
+        style={{
+          backgroundImage: `url(${cloudbg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center md:flex-row">
           {/* Texto principal */}

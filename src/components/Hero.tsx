@@ -4,6 +4,7 @@ import noodleImage from '../assets/noodle.svg';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { IoCalendarOutline, IoChatbubblesOutline } from 'react-icons/io5';
+import cloudbg from '../assets/digitalya/cloudbg.jpg';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -17,8 +18,16 @@ const Hero = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="pt-30 pb-20 md:pt-10 md:pb-16 bg-gradient-to-l from-[#3FA7DE]  to-[#E8F7FF] overflow-x-clip"
+      className="relative pt-30 pb-20 md:pt-10 md:pb-16 bg-gradient-to-l from-[#3FA7DE]  to-[#E8F7FF] overflow-x-clip"
     >
+      <div
+        className="absolute inset-0 w-full h-full opacity-35 mix-blend-overlay pointer-events-none select-none"
+        style={{
+          backgroundImage: `url(${cloudbg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center md:flex-row">
           {/* Logo y texto */}
