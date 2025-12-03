@@ -6,6 +6,7 @@ import Marketing from './pages/Marketing';
 import ScrollToTop from './components/ScrollToTop';
 import MarketingFunnel from './pages/MarketingFunnel';
 import WebFunnel from './pages/WebFunnel';
+import NextSteps from './pages/NextSteps';
 
 const App = () => {
   const isMarketingSubdomain =
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/marketing" element={<Marketing />} />
           <Route path="/mkt" element={<MarketingFunnel />} />
           <Route path="/web" element={<WebFunnel />} />
+          <Route path="/nextsteps" element={<NextSteps />} />
         </Routes>
       )}
     </>
