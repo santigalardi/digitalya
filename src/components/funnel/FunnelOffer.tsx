@@ -64,7 +64,7 @@ const FunnelOffer = ({ type }: FunnelOfferProps) => {
 
           <div className="text-center mt-10">
             <button
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('calendly')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-[#021938] text-white px-8 py-4 rounded-lg font-medium text-lg
                 flex items-center justify-center gap-2 mx-auto
                 shadow-[0_0_0_0_#3FA7DE] hover:shadow-[4px_4px_2px_0px_#00DDFF]

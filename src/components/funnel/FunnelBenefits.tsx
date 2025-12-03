@@ -80,11 +80,11 @@ const FunnelBenefits = ({ type }: FunnelBenefitsProps) => {
 
         <div className="text-center mt-16">
           <button
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-[#021938] text-white px-6 py-3 rounded-xl font-medium tracking-tight
-              flex items-center justify-center gap-2 mx-auto
-              shadow-[0_0_0_0_#3FA7DE] hover:shadow-[3px_3px_2px_0px_#00DDFF]
-              transform hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all cursor-pointer"
+            onClick={() => document.getElementById('calendly')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-[#021938] text-white px-8 py-4 rounded-lg font-medium text-lg
+                flex items-center justify-center gap-2 mx-auto
+                shadow-[0_0_0_0_#3FA7DE] hover:shadow-[4px_4px_2px_0px_#00DDFF]
+                transform hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all cursor-pointer"
           >
             {buttonIcon}
             {buttonText}
