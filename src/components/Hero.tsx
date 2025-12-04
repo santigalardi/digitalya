@@ -1,10 +1,10 @@
 import { IoCalendarOutline, IoChatbubblesOutline } from 'react-icons/io5';
+import { motion } from 'framer-motion';
 import cloudbg from '../assets/digitalya/cloudbg.webp';
-import heroimg from '../assets/digitalya/cloudpcimg.webp';
 
 const Hero = () => {
   const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault(); // Previene el salto brusco del navegador
+    e.preventDefault();
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Fondo Decorativo */}
       <div
         className="absolute inset-0 w-full h-full opacity-35 mix-blend-overlay pointer-events-none select-none"
-        aria-hidden="true" // 🟢 A11Y: Ocultamos el fondo decorativo a los lectores de pantalla
+        aria-hidden="true"
         style={{
           backgroundImage: `url(${cloudbg})`,
           backgroundSize: 'cover',
@@ -74,14 +74,20 @@ const Hero = () => {
 
           {/* Columna de Imagen (Oculta en Mobile) */}
           <div className="hidden md:block md:mt-0 md:h-[648px] md:flex-1 relative">
-            <img
-              src={heroimg}
-              alt="Ilustración de servicios digitales en la nube y tecnología" // 🟢 A11Y: Alt descriptivo pero conciso
-              width={800} // 🟢 PERFORMANCE: Define dimensiones base para evitar CLS
-              height={800}
-              loading="eager" // 🟢 PERFORMANCE: Carga inmediata (LCP)
-              fetchPriority="high" // 🟢 PERFORMANCE: Prioridad alta para el navegador
-              className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0 opacity-90 object-contain"
+            <motion.img
+              animate={{ y: [0, -40, 0] }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+              src="/cloudpcimg.webp"
+              alt="Ilustración de servicios digitales en la nube y tecnología"
+              width={648}
+              height={648}
+              loading="eager"
+              fetchPriority="high"
+              className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0 opacity-95 mt-18 ml-10 object-contain"
             />
           </div>
         </div>

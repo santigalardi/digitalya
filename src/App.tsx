@@ -7,6 +7,8 @@ import ScrollToTop from './components/ScrollToTop';
 import MarketingFunnel from './pages/MarketingFunnel';
 import WebFunnel from './pages/WebFunnel';
 import NextSteps from './pages/NextSteps';
+import FacebookPixel from './components/FacebookPixel';
+import GoogleAnalytics from './components/GoogleAnalytics';
 
 const App = () => {
   const isMarketingSubdomain =
@@ -18,7 +20,8 @@ const App = () => {
   return (
     <>
       <ScrollToTop />
-
+      <FacebookPixel />
+      <GoogleAnalytics />
       {isMarketingSubdomain ? (
         <Routes>
           <Route path="*" element={<MarketingFunnel />} />

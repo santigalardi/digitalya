@@ -97,8 +97,8 @@ const About = () => {
               className={imgClasses}
               loading="lazy"
               decoding="async"
-              width={900}
-              height={600}
+              width={450}
+              height={300}
             />
           </div>
         </motion.div>
@@ -131,8 +131,8 @@ const About = () => {
               className={imgClasses}
               loading="lazy"
               decoding="async"
-              width={900}
-              height={600}
+              width={450}
+              height={300}
             />
           </div>
         </motion.div>
@@ -162,8 +162,8 @@ const About = () => {
               className={imgClasses}
               loading="lazy"
               decoding="async"
-              width={900}
-              height={600}
+              width={450}
+              height={300}
             />
           </div>
         </motion.div>

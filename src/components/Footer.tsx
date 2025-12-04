@@ -25,8 +25,8 @@ const Footer = () => {
               alt="DigitalYa Logo"
               // 👇 Poner aquí las dimensiones reales de tu archivo (Click derecho en la imagen -> Propiedades)
               // Esto NO cambia el tamaño visual, solo protege contra saltos de diseño (CLS).
-              width={848}
-              height={247}
+              width={240}
+              height={70}
               className="w-[180px] md:w-[240px] h-auto drop-shadow-[0_0_4px_rgba(0,0,0,0.10)]"
               loading="lazy"
             />
