@@ -18,15 +18,17 @@ const WebDevelopment = () => {
   return (
     <>
       <NavBar />
-      <HeroWebDev />
-      {/* <LogoTicker /> */}
-      <Features />
-      <WhyChooseUs />
-      <FaqSection faqs={faqsWeb} />
-      {/* <Testimonials /> */}
-      {/* <Pricing /> */}
-      <CalendlyEmbed type="Web" />
-      <Contact />
+      <main>
+        <HeroWebDev />
+        {/* <LogoTicker /> */}
+        <Features />
+        <WhyChooseUs />
+        <FaqSection faqs={faqsWeb} />
+        {/* <Testimonials /> */}
+        {/* <Pricing /> */}
+        <CalendlyEmbed type="Web" />
+        <Contact />
+      </main>
       <Toaster />
       <Footer />
       <WhatsAppButton />

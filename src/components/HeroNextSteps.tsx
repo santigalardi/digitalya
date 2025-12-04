@@ -3,7 +3,7 @@ import cylinderImage from '../assets/cylinder.svg';
 import noodleImage from '../assets/noodle.svg';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import cloudbg from '../assets/digitalya/cloudbg.jpg';
+import cloudbg from '../assets/digitalya/cloudbg.webp';
 
 const HeroNextSteps = () => {
   const heroRef = useRef(null);

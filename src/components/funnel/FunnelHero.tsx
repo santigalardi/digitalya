@@ -1,6 +1,6 @@
-import digitalyaLogo from '../../assets/digitalya/logo-nobg.png';
+import digitalyaLogo from '../../assets/digitalya/logo-nobg.webp';
 import { IoCalendarOutline } from 'react-icons/io5';
-import cloudbg from '../../assets/digitalya/cloudbg.jpg';
+import cloudbg from '../../assets/digitalya/cloudbg.webp';
 
 interface FunnelHeroProps {
   type: 'marketing' | 'web';

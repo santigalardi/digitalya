@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { IoCalendarOutline, IoRocketOutline } from 'react-icons/io5';
 import heroMarketingImage from '../assets/digitalya/webbg2.webp'; // ← ajustá el nombre según tu imagen real
-import cloudbg from '../assets/digitalya/cloudbg.jpg';
+import cloudbg from '../assets/digitalya/cloudbg.webp';
 
 const HeroMarketing = () => {
   const heroRef = useRef(null);

@@ -17,9 +17,12 @@ const About = () => {
   const point2Scale = useTransform(scrollYProgress, [0.45, 0.55], [1, 1.4]);
   const point3Scale = useTransform(scrollYProgress, [0.75, 0.95], [1, 1.4]);
 
+  const imgClasses = 'w-4/5 md:w-4/5 max-w-md object-cover';
+
   return (
     <section
       id="about"
+      aria-label="Sobre nosotros"
       className="relative bg-gradient-to-b from-[#E8F7FF] via-[#FFFFFF] to-[#d3edfd] py-22 md:py-28 text-[#021938] overflow-hidden"
       ref={ref}
     >
@@ -37,6 +40,7 @@ const About = () => {
         {/* Línea de tiempo (solo visible en desktop) */}
         <motion.div
           style={{ scaleY }}
+          aria-hidden="true"
           className="hidden md:block absolute left-1/2 top-[380px] w-[4px] h-[calc(100%-540px)]
      bg-gradient-to-b from-[#41A9F0]/80 via-[#0077ff]/60 to-[#0044aa]/80 
      origin-top rounded-full shadow-[0_0_10px_#41A9F0aa]"
@@ -87,7 +91,15 @@ const About = () => {
 
           {/* Imagen */}
           <div className="w-full md:w-1/2 flex justify-center p-6">
-            <img src={webbg5} alt="Comprensión profunda" className="w-4/5 md:w-4/5 max-w-md object-cover" />
+            <img
+              src={webbg5}
+              alt="Equipo de trabajo analizando datos en una laptop"
+              className={imgClasses}
+              loading="lazy"
+              decoding="async"
+              width={900}
+              height={600}
+            />
           </div>
         </motion.div>
 
@@ -113,7 +125,15 @@ const About = () => {
 
           {/* Imagen */}
           <div className="w-full md:w-1/2 flex justify-center p-6">
-            <img src={webbg} alt="Diseño y personalización" className="w-4/5 md:w-4/5 max-w-md object-cover" />
+            <img
+              src={webbg}
+              alt="Equipo de trabajo diseñando wireframes"
+              className={imgClasses}
+              loading="lazy"
+              decoding="async"
+              width={900}
+              height={600}
+            />
           </div>
         </motion.div>
 
@@ -136,7 +156,15 @@ const About = () => {
 
           {/* Imagen */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <img src={webbg7} alt="Soporte continuo" className="w-4/5 md:w-4/5 max-w-md object-cover" />
+            <img
+              src={webbg7}
+              alt="Equipo de soporte trabajando con clientes"
+              className={imgClasses}
+              loading="lazy"
+              decoding="async"
+              width={900}
+              height={600}
+            />
           </div>
         </motion.div>
       </div>

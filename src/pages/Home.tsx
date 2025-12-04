@@ -7,20 +7,22 @@ import Footer from '../components/Footer';
 // import LogoTicker from '../components/LogoTicker';
 import { Toaster } from 'sonner';
 import NavBar from '../components/NavBar';
-import Nosotros from '../components/About';
+import About from '../components/About';
 import WhatsAppButton from '../components/WhatsappButton';
 
 const Home = () => {
   return (
     <>
       <NavBar />
-      <Hero />
-      {/* <LogoTicker /> */}
-      <Features />
-      <Nosotros />
-      {/* <Testimonials /> */}
-      {/* <Pricing /> */}
-      <Contact />
+      <main id="main-content" role="main">
+        <Hero />
+        {/* <LogoTicker /> */}
+        <Features />
+        <About />
+        {/* <Testimonials /> */}
+        {/* <Pricing /> */}
+        <Contact />
+      </main>
       <Toaster />
       <Footer />
       <WhatsAppButton />

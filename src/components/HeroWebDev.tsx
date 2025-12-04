@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { IoCalendarOutline, IoChatbubblesOutline } from 'react-icons/io5';
 import heroWebImage from '../assets/digitalya/webbg4.webp';
-import cloudbg from '../assets/digitalya/cloudbg.jpg';
+import cloudbg from '../assets/digitalya/cloudbg.webp';
 
 const HeroWebDev = () => {
   const heroRef = useRef(null);

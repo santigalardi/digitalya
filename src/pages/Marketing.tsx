@@ -18,16 +18,18 @@ const Marketing = () => {
   return (
     <>
       <NavBar />
-      <HeroMarketing />
-      {/* <LogoTicker /> */}
-      <Features />
-      <WhyChooseUs />
-      <FaqSection faqs={faqsMarketing} />
-      <CalendlyEmbed type="Marketing" />
-      {/* <Nosotros /> */}
-      {/* <Testimonials /> */}
-      {/* <Pricing /> */}
-      <Contact />
+      <main>
+        <HeroMarketing />
+        {/* <LogoTicker /> */}
+        <Features />
+        <WhyChooseUs />
+        <FaqSection faqs={faqsMarketing} />
+        <CalendlyEmbed type="Marketing" />
+        {/* <Nosotros /> */}
+        {/* <Testimonials /> */}
+        {/* <Pricing /> */}
+        <Contact />
+      </main>
       <Toaster />
       <Footer />
       <WhatsAppButton />
