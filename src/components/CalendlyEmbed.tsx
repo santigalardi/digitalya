@@ -7,8 +7,8 @@ type CalendlyEmbedProps = {
 };
 
 const LINKS = {
-  Marketing: 'https://calendly.com/jignaciosolari/impulsa-tu-marca-con-digitalya',
-  Web: 'https://calendly.com/jignaciosolari/impulsa-tu-marca-con-digitalya-desarrolloweb',
+  Marketing: 'https://calendly.com/jignaciosolari/crea-tu-pagina-web-con-digitalya',
+  Web: 'https://calendly.com/jignaciosolari/crea-tu-pagina-web-con-digitalya',
 };
 
 const SCRIPT_ID = 'calendly-widget-script';
