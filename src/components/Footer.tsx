@@ -42,6 +42,7 @@ const Footer = () => {
             <a
               href="mailto:ventas@digitalya.com.ar"
               className="text-[#065589] hover:text-[#021938] transition-colors font-medium"
+              data-track="btn-contact"
             >
               ventas@digitalya.com.ar
             </a>
@@ -53,7 +54,6 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"
-                data-track="btn-contact"
               >
                 <FaInstagram className="w-8 h-8 text-[#065589] group-hover:text-[#021938] transition-all group-hover:scale-110" />
               </a>
@@ -64,6 +64,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"
+                data-track="btn-lead"
               >
                 <FaWhatsapp className="w-8 h-8 text-[#065589] group-hover:text-[#021938] transition-all group-hover:scale-110" />
               </a>

@@ -233,6 +233,7 @@ const Contact = () => {
                 ? 'bg-[#3FA7DE] cursor-wait opacity-90'
                 : 'bg-[#021938] hover:bg-[#3FA7DE] hover:-translate-y-0.5 hover:shadow-lg cursor-pointer'
             }`}
+            data-track="btn-lead"
           >
             {isSending ? (
               <>
