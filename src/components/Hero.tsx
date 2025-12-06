@@ -66,6 +66,7 @@ const Hero = () => {
                 hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all
                 hover:shadow-[3px_3px_2px_0px_#00DDFF] hover:border-[#021938]
                 w-full md:w-auto cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#021938]"
+                data-track="btn-schedule"
               >
                 <IoCalendarOutline className="text-xl" aria-hidden="true" />
                 Agendar reunión

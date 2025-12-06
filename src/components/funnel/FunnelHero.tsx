@@ -70,6 +70,7 @@ const FunnelHero = ({ type }: FunnelHeroProps) => {
           bg-white/60 backdrop-blur-sm inline-flex items-center justify-center gap-2
           hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all
           hover:shadow-[3px_3px_2px_0px_#00DDFF] hover:border-[#021938] cursor-pointer"
+          data-track="btn-schedule"
         >
           <IoCalendarOutline className="text-xl" />
           Agendar reunión

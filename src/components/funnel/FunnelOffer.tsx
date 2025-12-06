@@ -69,6 +69,7 @@ const FunnelOffer = ({ type }: FunnelOfferProps) => {
                 flex items-center justify-center gap-2 mx-auto
                 shadow-[0_0_0_0_#3FA7DE] hover:shadow-[4px_4px_2px_0px_#00DDFF]
                 transform hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all cursor-pointer"
+              data-track="btn-schedule"
             >
               {ctaIcon}
               {cta}
