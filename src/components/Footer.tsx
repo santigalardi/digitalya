@@ -53,6 +53,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"
+                data-track="btn-contact"
               >
                 <FaInstagram className="w-8 h-8 text-[#065589] group-hover:text-[#021938] transition-all group-hover:scale-110" />
               </a>

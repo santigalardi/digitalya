@@ -143,6 +143,7 @@ const NavBar = () => {
                     className={`font-medium text-md tracking-tight transition-colors duration-300 bg-transparent border-none cursor-pointer ${
                       isScrolled ? 'text-[#021938] hover:text-[#41A9F0]' : 'text-white hover:text-[#021938]'
                     }`}
+                    data-track="btn-contact"
                   >
                     {item.name}
                   </motion.button>
@@ -155,6 +156,7 @@ const NavBar = () => {
                   transition-all
                   shadow-[0_0_0_0_#3FA7DE]
                   hover:shadow-[3px_3px_2px_0px_#00DDFF] transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+                data-track="btn-contact"
               >
                 Contáctanos
               </button>
@@ -245,6 +247,7 @@ const NavBar = () => {
                 <button
                   onClick={() => handleScrollOrNavigate('contact')}
                   className="bg-[#021938] text-white px-4 py-2 rounded-lg font-medium w-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                  data-track="btn-contact"
                 >
                   Contáctanos
                 </button>

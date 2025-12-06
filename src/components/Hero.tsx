@@ -51,13 +51,14 @@ const Hero = () => {
                 transform hover:-translate-x-0.5 hover:-translate-y-0.5
                 w-full md:w-auto cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#021938]"
                 aria-label="Ir al formulario de contacto"
+                data-track="btn-contact"
               >
                 Contanos qué necesitás
                 <IoChatbubblesOutline className="ml-3 text-xl" aria-hidden="true" />
               </a>
 
               <a
-                href="https://calendly.com/jignaciosolari/impulsa-tu-marca-con-digitalya"
+                href="https://calendly.com/jignaciosolari/crea-tu-pagina-web-con-digitalya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-3 rounded-xl font-medium text-[#021938] border border-[#021938]/30
