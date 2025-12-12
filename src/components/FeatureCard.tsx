@@ -24,7 +24,6 @@ const FeatureCard = ({ icon: Icon, title, description, link, tag, hideButton }: 
             aria-label={`Ver más sobre ${title}`}
             className="inline-flex items-center gap-2 bg-[#021938] text-white px-4 py-2 rounded-full text-sm font-medium
               transition-all hover:bg-[#3FA7DE] hover:-translate-y-0.5"
-            data-track="btn-view-content"
           >
             Ver más
             <ArrowRight className="w-4 h-4" />

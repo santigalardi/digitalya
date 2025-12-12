@@ -1,4 +1,6 @@
+import { FaWhatsapp } from 'react-icons/fa';
 import { FiCheck, FiMonitor, FiTrendingUp } from 'react-icons/fi';
+import { getWhatsAppLink } from '../../utils/whatsapp';
 
 type FunnelOfferProps = {
   type: 'Web' | 'Marketing';
@@ -41,7 +43,9 @@ const FunnelOffer = ({ type }: FunnelOfferProps) => {
     },
   };
 
-  const { title, subtitle, planTitle, bullets, cta, ctaIcon } = content[type];
+  const whatsappLink = getWhatsAppLink();
+
+  const { title, subtitle, planTitle, bullets } = content[type];
 
   return (
     <section className="py-20 bg-gradient-to-r from-[#021938] to-[#06325f] text-white">
@@ -63,17 +67,16 @@ const FunnelOffer = ({ type }: FunnelOfferProps) => {
           </ul>
 
           <div className="text-center mt-10">
-            <button
-              onClick={() => document.getElementById('calendly')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-[#021938] text-white px-8 py-4 rounded-lg font-medium text-lg
-                flex items-center justify-center gap-2 mx-auto
-                shadow-[0_0_0_0_#3FA7DE] hover:shadow-[4px_4px_2px_0px_#00DDFF]
-                transform hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all cursor-pointer"
-              data-track="btn-schedule"
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-track="btn-lead"
+              className="px-8 py-4 w-full md:w-auto min-w-[240px] rounded-xl font-bold text-[#021938] border border-[#021938]/30 bg-white/60 backdrop-blur-sm inline-flex items-center justify-center gap-3 transition-all cursor-pointer hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_2px_0px_#25D366] hover:border-[#25D366]"
             >
-              {ctaIcon}
-              {cta}
-            </button>
+              <FaWhatsapp className="text-2xl text-[#25D366]" />
+              Quiero mi Sitio Web
+            </a>
           </div>
         </div>
       </div>

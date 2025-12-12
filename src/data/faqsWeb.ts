@@ -7,7 +7,7 @@ export const faqsWeb = [
   {
     question: '¿Cuánto tarda en desarrollarse un sitio web?',
     answer:
-      'En promedio, un sitio web puede estar listo entre 2 y 4 semanas, mientras que proyectos más complejos pueden requerir más tiempo.',
+      'Gracias a nuestro proceso de desarrollo ágil, tu sitio web profesional estará online, probado y listo para vender en solo 7 días hábiles.',
   },
   {
     question: '¿Qué necesito para comenzar?',

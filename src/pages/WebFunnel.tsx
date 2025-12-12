@@ -9,11 +9,14 @@ import WhatsAppButton from '../components/WhatsappButton';
 import CalendlyEmbed from '../components/CalendlyEmbed';
 import FaqSection from '../components/FaqSection';
 import { faqsWeb } from '../data/faqsWeb';
+import TrustedClients from '../components/funnel/TrustedClients';
 
 const WebFunnel = () => {
   return (
     <>
       <FunnelHero type="web" />
+      <TrustedClients />
+
       <FunnelPainPoints type="web" />
       <FunnelBenefits type="Web" />
       <FunnelOffer type="Web" />

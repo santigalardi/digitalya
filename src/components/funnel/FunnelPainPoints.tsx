@@ -52,7 +52,7 @@ const FunnelPainPoints = ({ type }: FunnelPainPointsProps) => {
       };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#ECFBFF]">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         {/* TÍTULO */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#021938] mb-10">{data.title}</h2>
